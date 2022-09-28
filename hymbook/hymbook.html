@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            font-family: "poppins";
+            color: #151b32;
+            border: 1px solid rgb(190, 190, 190);
+            background-color: rgba(209, 208, 213, 0.52);
+            padding: 10px;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        .content {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+
+        .grid-one {
+            display: grid;
+            grid-template-areas:
+                "head1 head2 head3 head4 head5 head6"
+                "foot1 foot2 foot3 foot4 foot5 foot6";
+
+        }
+
+        .box-one {
+            margin-left: 9px;
+        }
+
+        .text {
+            cursor: pointer;
+            padding: 0px 15px 0px 15px;
+            background-color: #fbfcff;
+            border-radius: 20px;
+            font-weight: 520;
+            box-shadow: 0px 0px 3px 2px #cecece94;
+            font-size: 15px;
+            border: 2px solid lightgray;
+        }
+
+        .text:hover {
+            border: 2px solid rgba(191, 191, 191, 0.849);
+            box-shadow: 0px 0px 3px 2px #b0b0b04e;
+        }
+
+        .text:active {
+            border: 2px solid rgba(191, 191, 191, 0.866);
+            box-shadow: 0px 0px 3px 2px #b0b0b07a;
+        }
+
+        .box-one .box1 {
+            grid-area: head1;
+        }
+
+        .box-one .box2 {
+            grid-area: head2;
+
+        }
+
+        .box-one .box3 {
+            grid-area: head3;
+        }
+
+        .box-one .box4 {
+            grid-area: head4;
+        }
+
+        .box-one .box5 {
+            grid-area: head5;
+        }
+
+        .box-one .box6 {
+            grid-area: head6;
+        }
+
+        .box-one .box7 {
+            grid-area: foot1;
+        }
+
+        .box-one .box8 {
+            grid-area: foot2;
+
+        }
+
+        .box-one .box9 {
+            grid-area: foot3;
+        }
+
+        .box-one .box10 {
+            grid-area: foot4;
+        }
+
+        .box-one .box11 {
+            grid-area: foot5;
+        }
+
+        .box-one .box12 {
+            grid-area: foot6;
+        }
+
+        .grid-two {
+            display: grid;
+            grid-template-areas:
+                "head1"" head2 ""head3"
+                "foot1"" foot2 ""foot3";
+            gap: 15px;
+
+        }
+
+        .box-two {
+            display: block;
+            background-color: #fbfcff;
+            border-radius: 10px;
+            border: 2px solid lightgray;
+            text-align: justify;
+            font-size: 12px;
+            padding: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            box-shadow: 0px 2px 3px 2px #cecece94;
+        }
+
+        .box-two .box1 {
+            grid-area: head1;
+        }
+
+        .box-two .box2 {
+            grid-area: head2;
+
+        }
+
+        .box-two .box3 {
+            grid-area: head3;
+        }
+
+        .box-two .box4 {
+            grid-area: foot1;
+        }
+
+        .box-two .box5 {
+            grid-area: foot2;
+        }
+
+        .box-two .box6 {
+            grid-area: foot3;
+        }
+
+        .tag {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tag-text:active {
+            border: 2px solid rgba(191, 191, 191, 0.866);
+            box-shadow: 0px 0px 3px 2px #b0b0b07a;
+        }
+
+        .search {
+            border-radius: 50px;
+            border: 2px solid lightgray;
+            padding: 3px 10px 3px 10px;
+            height: 40px;
+            width: 98%;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        .search:hover {
+            border: 2px solid rgb(168, 168, 168);
+        }
+
+        .tag-text {
+            border: 1px solid rgb(23, 19, 19);
+            cursor: pointer;
+            border-radius: 20px;
+            color: rgb(71, 71, 71);
+            padding: 3px 7px 3px 7px;
+            font-size: 10px;
+        }
+
+        .tag-text:hover {
+            box-shadow: 0px 0px 3px 2px #cececec4;
+        }
+
+        .image {
+            border: 1px solid rgb(71, 71, 71);
+            cursor: pointer;
+            border-radius: 50px;
+            width: 200px;
+            height: 25px;
+            margin: auto;
+            margin-top: -5px;
+            text-align: center;
+            color: rgb(71, 71, 71);
+            padding: 10px 15px 10px 15px;
+        }
+
+        .two {
+            margin-top: -20px;
+        }
+
+        @media(min-width:767px) {
+            .image {
+                border-radius: 50px;
+                width: 200px;
+                height: 25px;
+                margin: auto;
+                margin-top: -5px;
+                text-align: center;
+                color: rgb(71, 71, 71);
+                padding: 10px 15px 10px 15px;
+            }
+
+            .box-two .box1 {
+                grid-area: head1;
+            }
+
+            .box-two .box2 {
+                grid-area: head2;
+
+            }
+
+            .box-two .box3 {
+                grid-area: mid1;
+            }
+
+            .box-two .box4 {
+                grid-area: mid2;
+            }
+
+            .box-two .box5 {
+                grid-area: foot1;
+            }
+
+            .box-two .box6 {
+                grid-area: foot2;
+            }
+
+            .grid-two {
+                display: grid;
+                grid-template-areas:
+                    "head1 head2 ""mid1 mid2"" foot1 foot2";
+                gap: 13px;
+
+            }
+
+            .box-two {
+                display: block;
+                background-color: #fbfcff;
+                border-radius: 10px;
+                border: 2px solid lightgray;
+                text-align: justify;
+                font-size: 12px;
+                padding: 20px;
+            }
+
+            .box-one {
+                margin-left: 30px;
+            }
+
+            .search {
+                margin: auto;
+                height: 50px;
+                width: 92%;
+                font-size: 17px;
+                margin-left: 37px;
+            }
+
+            .grid-two {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .text {
+                padding: 0px 25px 0px 25px;
+                font-size: 15px;
+            }
+
+            .tag-text {
+                border: 1px solid rgb(23, 19, 19);
+                cursor: pointer;
+                border-radius: 20px;
+                color: rgb(71, 71, 71);
+                padding: 3px 7px 3px 7px;
+                font-size: 12px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        @media(min-width:1000px) {
+            .container {
+                margin-left: 265px;
+            }
+
+            .content {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+
+            .left {
+                background-color: rgb(244, 244, 244);
+                padding-left: 10px;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                width: 250px;
+                border-right: 5px ridge rgb(192, 192, 192);
+            }
+
+            .image {
+                border-radius: 50px;
+                width: 200px;
+                height: 25px;
+                margin: auto;
+                margin-top: -5px;
+                text-align: center;
+                color: rgb(71, 71, 71);
+                padding: 10px 15px 10px 15px;
+            }
+
+            .box-two .box1 {
+                grid-area: head1;
+            }
+
+            .box-two .box2 {
+                grid-area: head2;
+
+            }
+
+            .box-two .box3 {
+                grid-area: head3;
+            }
+
+            .box-two .box4 {
+                grid-area: foot1;
+            }
+
+            .box-two .box5 {
+                grid-area: foot2;
+            }
+
+            .box-two .box6 {
+                grid-area: foot3;
+            }
+
+            .grid-two {
+                display: grid;
+                grid-template-areas:
+                    "head1 head2 head3"
+                    "foot1 foot2 foot3";
+                gap: 13px;
+
+            }
+
+            .box-two {
+                display: block;
+                background-color: #fbfcff;
+                border-radius: 10px;
+                border: 2px solid lightgray;
+                text-align: justify;
+                font-size: 12px;
+                padding: 20px;
+            }
+
+            .search {
+                margin: auto;
+                height: 50px;
+                font-size: 17px;
+                margin-left: 40px;
+            }
+
+            .grid-two {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .box-one {
+                margin-left: 27px;
+            }
+
+            .text {
+                padding: 0px 25px 0px 25px;
+                font-size: 15px;
+            }
+
+            .tag-text {
+                border: 1px solid rgb(23, 19, 19);
+                cursor: pointer;
+                border-radius: 20px;
+                color: rgb(71, 71, 71);
+                padding: 3px 7px 3px 7px;
+                font-size: 12px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left">
+
+        </div>
+        <div class="right content">
+            <div class="body-container">
+                <div class="image">
+                    <img src="" alt="image">
+                </div>
+                <br>
+                <div class="search-box"><input class="search" type="search" placeholder="Search Methodist Hyms...">
+                </div>
+                <br>
+                <div class="grid-one">
+                    <div class="box-one box1 one">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box2 one">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box3 one">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box4 one">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box5 one">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box6 one">
+                        <p> <span class="text">text</span> </p>
+                    </div>
+
+                    <div class="box-one box7 two">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box8 two">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box9 two">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box10 two">
+                        <p> <span class="text">text</span> </p>
+                    </div>
+
+                    <div class="box-one box11 two">
+                        <p> <span class="text">text</span> </p>
+
+                    </div>
+
+                    <div class="box-one box12 two">
+                        <p> <span class="text">text</span> </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="grid-two">
+                <div class="box-two box1">
+                    <h2>Header Text</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard
+                        dummy text ever since the 1500s.</p>
+                    <div class="tag">
+                        <p><span class="tag-text">1022 hymns</p></span>
+                        <p><span class="tag-text">1942 likes</p></span>
+                    </div>
+                </div>
+
+                <div class="box-two box2">
+                    <h2>Header Text</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard
+                        dummy text ever since
+                        the 1500s.</p>
+                    <div class="tag">
+                        <p><span class="tag-text">1022 hymns</p></span>
+                        <p><span class="tag-text">1942 likes</p></span>
+                    </div>
+                </div>
+
+                <div class="box-two box3">
+                    <h2>Header Text</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard
+                        dummy text ever since
+                        the 1500s.</p>
+                    <div class="tag">
+                        <p><span class="tag-text">1022 hymns</p></span>
+                        <p><span class="tag-text">1942 likes</p></span>
+                    </div>
+                </div>
+                <div class="box-two box4">
+                    <h2>Header Text</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard
+                        dummy text ever since
+                        the 1500s.</p>
+                    <div class="tag">
+                        <p><span class="tag-text">1022 hymns</p></span>
+                        <p><span class="tag-text">1942 likes</p></span>
+                    </div>
+                </div>
+
+                <div class="box-two box5">
+                    <h2>Header Text</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard
+                        dummy text ever since
+                        the 1500s.</p>
+                    <div class="tag">
+                        <p><span class="tag-text">1022 hymns</p></span>
+                        <p><span class="tag-text">1942 likes</p></span>
+                    </div>
+                </div>
+
+                <div class="box-two box6">
+                    <h2>Header Text</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard
+                        dummy text ever since
+                        the 1500s.</p>
+                    <div class="tag">
+                        <p><span class="tag-text">1022 hymns</p></span>
+                        <p><span class="tag-text">1942 likes</p></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
